@@ -1,0 +1,265 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import "normalize.css";
+@import "compass/css3";
+
+
+body {
+	background: #1e1e1e url(../images/bg.jpg) top center no-repeat;
+}
+
+@media screen and (min-width:1600px) {
+	body {
+		@include background-size(100%);
+	}
+}
+
+//Common Elements
+
+hr.divider {
+	width: 265px;
+	margin: 20px auto;
+	display: block;
+	background: #919191;
+	height: 1px;
+	border: 0;
+	outline: 0;
+}
+
+h1.title {
+	font-size: 24px;
+	color: #f2f2f2;
+	font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.clear {
+	clear: both;
+}
+
+//Header CSS
+
+header#main {
+	height: 78px;
+	background: url(../images/navbar.png) repeat-x;
+	nav {
+		max-width:430px;
+		margin: 0 auto;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		float: left;
+		width: 25%;
+	}
+	a {
+		color:#fff;
+		font-weight: 200;
+		text-decoration: none;
+		border: 1px solid #202020;
+		border-bottom:none;
+		padding: 20px 0;
+		display: block;
+		text-align: center;
+		&:hover {
+			background: #121212;
+		}
+	}
+}
+
+//Banner CSS
+
+div.banner {
+	max-width:850px;
+	display: block;
+	margin: 0 auto;
+	h1 {
+		font-size:28px;
+		font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+		color: #f2f2f2;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align:center;
+		padding-bottom: 20px;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		&.logo {
+			padding-top: 10px;
+		}
+		&.profile {
+			padding-top: 10px;
+		}
+	}
+}
+
+//About CSS
+article.about {
+	max-width: 632px;
+	margin: 45px auto;
+	display: block;
+	h3 {
+		font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+		font-weight: 400;	
+		font-size: 17px;
+		padding: 0;
+		margin: 0;
+	}
+	p {
+		font-family: "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.border-box {
+		border: 1px solid #cecece;
+		&:before {
+			content:url(../images/notch-light-gray.png);
+			margin: -31px auto -5px;
+			display: block;
+			width: 36px;
+		}
+		.box {
+			background: #cecece url(../images/bg-light-gradiant.jpg) repeat-x top;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #131313;
+			padding: 15px;
+			@include box-sizing(border-box);
+		}
+	}
+}
+
+//Projects CSS
+article.projects {
+	max-width: 632px;
+	margin: 0 auto 50px;
+	display: block;
+}
+
+ul.projects-block {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li {
+		margin: 0 15px 45px 0;
+		padding: 0;
+		border: 1px solid #cecece;
+		width: 62px;
+		height: 232px;
+		padding: 1px;
+		float: left;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+article.project-detail {
+	width: 100%;
+	background: #121212;
+	li.project {
+		max-width:632px;
+		margin: -45px auto 75px;
+		display: none;
+		padding: 25px 0;
+		overflow: hidden;
+	}
+	h1 {
+		font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+		color: #f2f2f2;
+		font-weight: 300;
+		font-size: 32px;
+		margin: 0;
+		small, sup {
+			color: #777777;
+		}
+		sup {
+			font-size: 14px;
+			vertical-align: super;
+		}
+		small {
+			white-space: nowrap;
+		}
+	}
+	div.descrip {
+		color: #fff;
+		font-weight: 200;
+		p {
+			
+		}
+		ul {
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			color: #777;
+			width: 90%;
+		}	
+		li {
+			color: #777;
+			display: block;
+			&:before {
+				content:"+ ";
+			}
+		}
+	}
+}
+
+//Contact CSS
+article.contact {
+	max-width: 640px;
+	margin: 0 auto;
+	display: block;
+}
+
+div.contact-form {
+	max-width: 640px;
+	height: 681px;
+	background: url(../images/bg-contact.png) no-repeat center top;
+	@include box-sizing(border-box);
+	padding: 45px 40px;
+}
+
+form {
+	label {
+		font-family: "Oswald"
+, "Helvetica Neue", Helvetica, sans-serif;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 300;
+	}
+	input[type="text"] {
+		background: none;
+		border-style: none;
+		border-bottom:1px dotted #777;
+		outline: 0;
+		width: 90%;
+	}
+	textarea {
+		background: none;
+		border: none;
+		@include box-shadow(0px 2px 4px rgba(0, 0, 0, .15)inset);
+		border-bottom:1px solid #cecece;
+		width: 90%;
+	}
+	input[type="image"] {
+		border: none;
+		outline: 0;
+	}
+}
+
+//Footer CSS
+footer#main {
+	height: 334px;
+	background: url(../images/footer.png) repeat-x;
+}

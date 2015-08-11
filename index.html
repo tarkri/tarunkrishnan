@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tarun Designs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="p:domain_verify" content="c13e14f519ebd015851bbabe810027cd"/>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" href="library/css/screen.css" />
+	<meta name="google-site-verification" content="ZF3KWIBPLv9VWZNKIPwEKB_bVls2--GU_5qRoYDQVWs" />
+</head>
+<body>
+	<div id="container">
+		<header id="main">
+			<nav>
+				<ul>
+
+				</ul>
+			</nav>	
+		</header>
+		<!-- /header#main -->
+		
+		<section id="content">
+			<div class="banner">
+				<h1>Communicate effectively with designs that captivate your audiences 
+and raise awareness of your unique brand experience</h1>
+				<hr class="divider" />
+				<img src="library/images/profile.png" alt="" class="profile" />
+				<img src="library/images/logo.png" alt="" class="logo" />
+			</div>
+			<!-- /.banner -->
+			
+			<article class="about">
+				<div class="border-box">
+					<div class="box">
+						<h3>Hello! My name is Tarun Lakshman Krishnan and I am a designer based in Dallas, Texas!</h3>
+						<p>
+							I work with passionate individuals to help them create a rich web presence and establish a design aesthetic that they can take into any future venture with confidence.
+							<br /><br />
+							I also strive to communicate good design and business principles with the people I work and create with. Just like in life, the best designs are made when we work together to not only attract audiences, but also to make something compelling and memorable for the people who matter to us most.
+							<br /><br />
+							Want to work to make create great creations? <a style="color:#EB822A;" href="mailto:tarun@tarunkrishnan?subject=Contacting Tarun Krishnan">Contact Me</a>
+						</p>
+					</div>
+				</div>	
+			</article>
+			<!-- /article.about -->
+
+			<div class="clear"></div>
+			<hr class="divider" />
+
+			
+		</section>
+		<!-- /section#content -->
+		
+		<footer id="main">
+			
+		</footer>
+		<!-- /footer#main -->	
+	</div>
+	<!-- /#container -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="library/js/jquery.min.js">\x3C/script>')</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('body').css({opacity: 0, backgroundPositionY:'-10px'});
+			$('#content').css({opacity: 0, marginTop:'+10px'});
+			$('body').animate({
+				backgroundPositionY:'+10px',
+				opacity: 1
+			}, 1000);
+			$('#content').animate({
+				marginTop:'-10px',
+				opacity:1
+			}, 1000);
+			var projectHeader = $('ul.projects-block li');
+			var projectDetail = $('ul.detail > li');
+			$(projectDetail).find('img').css({marginLeft:'-9999px'})
+			$(projectHeader).click(function(){
+				var headerData = $(this).data('project');
+				$(projectDetail).slideUp();
+				$(projectHeader).animate({marginTop:'0px', opacity: '1'}, 200);
+				$(projectHeader).animate({opacity: '.5'}, 300);
+				$(this).animate({opacity: '1'}, 200);
+				$('ul.detail li[data-detail="'+ headerData + '"]').slideToggle(700).find('h1').animate({marginTop:'-40px'}, 800).animate({marginTop:'0px'}, 500);
+				$('ul.detail li[data-detail="'+ headerData + '"]').find('img').animate({marginLeft:'0px'}, 1500);
+			});
+		});	
+	</script>
+</body>
+</html>
