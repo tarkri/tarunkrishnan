@@ -7,6 +7,8 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 30px;
+  background:url(../img/bg.jpg) top right;
+  background-size:cover;
 }
 
 
@@ -46,8 +48,8 @@ body {
     padding: 0px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    background-color: rgba(53, 174, 210, .8);
+    //border-right: 1px solid #eee;
   }
 }
 
@@ -84,6 +86,32 @@ body {
 }
 .main .page-header {
   margin-top: 0;
+  color:#fff;
+  border-bottom:1px solid rgba(255, 255, 255, .4);
+}
+
+.jumbotron {
+	background:#0f0f0f;
+	background: rgba(0, 0, 0, .7);
+	color: #eee;
+	font-style: italic;
+	h1, h2, h3, h4 {
+		line-height: 1.5;
+	}
+}
+
+.recent-work {
+	.thumbnail {
+		background:#0f0f0f;
+		background: rgba(0, 0, 0, .7);
+		color: #eee;
+		.caption {
+			padding: 15px 20px;
+		}
+		h3 {
+			color: #eee;
+		}
+	}
 }
 
 ////
