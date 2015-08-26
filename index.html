@@ -35,8 +35,8 @@
 	   	<div class="col-md-8 col-md-offset-2 text-center">
 		   	<h1 class="tk-expo-serif-pro">
 			   	Hi, I'm Tarun Krishnan. <br />
-				I'm a <span style="color:#ec852b;background:rgba(236, 133, 42, .2);padding:0 10px;">Design Technologist,</span> <br />
-				<span style="color:#ec852b;background:rgba(236, 133, 42, .2);padding:0 10px;">Illustrator,</span> & <span style="color:#ef3f37; background:rgba(239, 63, 55, .2);padding:0 10px;">Musician. </span>
+				I'm a <span class="design" style="color:#ec852b;background:rgba(236, 133, 42, .2);padding:0 10px;">Design Technologist,</span> <br />
+				<span class="design" style="color:#ec852b;background:rgba(236, 133, 42, .2);padding:0 10px;">Illustrator,</span> & <span class="music" style="color:#ef3f37; background:rgba(239, 63, 55, .2);padding:0 10px;">Musician. </span>
 		   	</h1>
 	   	</div>
 	   	<div class="col-md-12 text-center">
@@ -56,5 +56,48 @@
     <script src="library/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="library/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    	$(document).ready(function(){
+	    	var i = 1;
+    		$('span.design').mouseenter(function(e){
+	    		if(i == 1) {
+		    		$('img.logo').animate({opacity:0}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').attr('src', 'library/img/design-logo.png')
+		    		}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').animate({opacity:1}, 500);
+		    		}, 1000);
+		    		i = 2;
+	    		}
+    		});
+    		$('span.music').mouseenter(function(){
+	    		if(i == 1) {
+		    		$('img.logo').animate({opacity:0}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').attr('src', 'library/img/amartiai-logo.png')
+		    		}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').animate({opacity:1}, 500);
+		    		}, 1000);
+		    		i = 2;
+	    		}
+    		});
+    		$('img.logo').mouseenter(function(){
+					if(i == 2) {
+		    		$('img.logo').animate({opacity:0}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').attr('src', 'library/img/primary-logo.png')
+		    		}, 500);
+		    		setTimeout(function(){
+			    		$('img.logo').animate({opacity:1}, 500);
+		    		}, 1000);
+		    		i = 1;
+		    		}
+
+    		});
+    		
+    	});
+    </script>
   </body>
 </html>
